@@ -18,6 +18,14 @@ Returns a list of string representing a deck of playing cards
     Enum.shuffle(deck)
   end
 
+@doc """
+  Determines whetherr a deck contains a given card
+
+## Examples
+    iex> deck = Cards.create_deck
+    iex> Cards.contains?(deck, "Ace of Spades")
+    true
+"""
   def contains?(deck, card) do
     Enum.member?(deck, card)
   end
@@ -27,9 +35,8 @@ Returns a list of string representing a deck of playing cards
   The `hand_size` argument idicats how many cards should be in the hand.
 
 ## Examples
-
-    iex>  deck = Cards.create_deck
-    ies> {hand, deck} = Cards.deal(deck, 1)
+    iex> deck = Cards.create_deck
+    iex> {hand, deck} = Cards.deal(deck, 1)
     iex> hand
     ["Ace of Spades"]
 """
